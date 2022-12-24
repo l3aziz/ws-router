@@ -1,0 +1,17 @@
+.movie-container {
+    border: 1px black solid;
+    width: 1220px;
+    margin: auto;
+    display: flex;
+    min-height: 694px;
+    flex-direction: column;
+
+}
+.movie-items {
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 20px;
+}
