@@ -2,6 +2,7 @@ import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
+import { Link } from "react-router-dom";
 import Navbar from "react-bootstrap/Navbar";
 import ReactStars from "react-rating-stars-component";
 
@@ -11,7 +12,7 @@ function NavMain({ setSearch, setRating }) {
   };
   return (
     <div>
-      <Navbar bg="light" expand="dark">
+      <Navbar bg="light" expand="lg">
         <Container fluid>
           <Navbar.Brand href="#">
             {" "}
@@ -37,7 +38,16 @@ function NavMain({ setSearch, setRating }) {
               style={{ maxHeight: "100px" }}
               navbarScroll
             >
-              <Nav.Link href="#action1">Home</Nav.Link>
+              <Nav className="me-auto">
+                <Link to="/" className="link">
+                  Home
+                </Link>
+              </Nav>
+              <Nav className="me-auto">
+                <Link to="Movie" className="link">
+                  Movies
+                </Link>
+              </Nav>
             </Nav>
             <Form className="d-flex">
               <Form.Control

@@ -1,7 +1,8 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-function CardList({ title, img, rate, date }) {
+import { Link } from "react-router-dom";
+function CardList({ title, img, rate, date, id }) {
   return (
     <div>
       <Card style={{ width: "18rem" }}>
@@ -12,7 +13,9 @@ function CardList({ title, img, rate, date }) {
             <h5> ⭐:{rate}</h5>
             <h5>{date}</h5>
           </Card.Text>
-          <Button variant="danger">watch here</Button>{" "}
+          <Button variant="danger">
+            <Link to={`/product/${id}`}>watch here</Link>
+          </Button>{" "}
         </Card.Body>
       </Card>
     </div>

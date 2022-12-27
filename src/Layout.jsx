@@ -1,13 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import Navmain from "./components/Navmain";
 import { Outlet } from "react-router";
 import Footer from "./components/Footer";
-function Layout() {
-  const [search, setSearch] = useState("");
-  const [rating, setRating] = useState(0);
+function Layout({ setSearch, setRating }) {
   return (
     <div>
-      <Navmain  />
+      <Navmain setRating={setRating} setSearch={setSearch} />
       <Outlet />
       <Footer />
     </div>

@@ -3,6 +3,7 @@ import "./Style.css";
 import { useParams } from "react-router-dom";
 import { data } from "../data";
 import Card from "react-bootstrap/Card";
+import ReactPlayer from "react-player";
 function WatchPage() {
   const params = useParams();
   const product = data.find((elt) => elt.id === params.id);
@@ -22,6 +23,7 @@ function WatchPage() {
             <Card.Text>Last updated 3 mins ago</Card.Text>
           </Card.ImgOverlay>
         </Card>
+        <ReactPlayer url={product.src} controls={true} />
       </div>
     </div>
   );
